@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Hanbat</string>
+
+    <string name="calendar">일정</string>
+    <string name="map">MAP</string>
+    <string name="notification">공지</string>
 </resources>
