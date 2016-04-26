@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import pumpkin.kr.hanbat.R;
+
 public class Fragment2 extends Fragment {
 
 	@Override
