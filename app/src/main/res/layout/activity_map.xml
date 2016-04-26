@@ -5,10 +5,18 @@
     android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/bottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true">
         <include layout="@layout/bottom" />
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/map_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom"
+        android:orientation="horizontal">
+    </LinearLayout>
 </RelativeLayout>

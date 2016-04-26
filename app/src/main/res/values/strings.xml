@@ -4,4 +4,5 @@
     <string name="calendar">일정</string>
     <string name="map">MAP</string>
     <string name="notification">공지</string>
+    <string name="str_done">완료</string>
 </resources>
