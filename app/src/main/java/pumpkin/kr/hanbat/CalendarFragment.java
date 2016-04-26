@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import pumpkin.kr.hanbat.base.BaseFragment;
-import pumpkin.kr.hanbat.common.Utils;
 
 /**
  * Created by farid on 2016-04-25.
