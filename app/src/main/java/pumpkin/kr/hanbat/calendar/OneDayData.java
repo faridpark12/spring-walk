@@ -2,10 +2,6 @@ package pumpkin.kr.hanbat.calendar;
 
 import java.util.Calendar;
 
-import com.hansune.calendarproto.cal.MomusWeather.Weather;
-
-
-
 /**
  * Value object for a day
  * @author brownsoo
@@ -14,7 +10,7 @@ import com.hansune.calendarproto.cal.MomusWeather.Weather;
 public class OneDayData {
     
     Calendar cal;
-    Weather weather;
+    MomusWeather.Weather weather;
     private CharSequence msg = "";
     
     /**
@@ -22,7 +18,7 @@ public class OneDayData {
      */
     public OneDayData() {
         this.cal = Calendar.getInstance();
-        this.weather = Weather.SUNSHINE;
+        this.weather = MomusWeather.Weather.SUNSHINE;
     }
     
     /**
@@ -71,7 +67,7 @@ public class OneDayData {
      * Set weather info
      * @param weather Weather instance
      */
-    public void setWeather(Weather weather) {
+    public void setWeather(MomusWeather.Weather weather) {
         this.weather = weather;
     }
     
@@ -79,7 +75,7 @@ public class OneDayData {
      * Get weather info
      * @return
      */
-    public Weather getWeather() {
+    public MomusWeather.Weather getWeather() {
         return this.weather;
     }
 

@@ -9,9 +9,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.hansune.calendarproto.HLog;
-import com.hansune.calendarproto.MConfig;
-import com.hansune.calendarproto.R;
+import pumpkin.kr.hanbat.R;
+import pumpkin.kr.hanbat.common.Utils;
 
 /**
  * View to display a day
@@ -19,10 +18,7 @@ import com.hansune.calendarproto.R;
  *
  */
 public class OneDayView extends RelativeLayout {
- 
-    private static final String TAG = MConfig.TAG;
     private static final String NAME = "OneDayView";
-    private final String CLASS = NAME + "@" + Integer.toHexString(hashCode());
     
     /** number text field */
     private TextView dayTv;
@@ -144,8 +140,7 @@ public class OneDayView extends RelativeLayout {
      * Updates UI upon the value object.
      */
     public void refresh() {
-        
-        HLog.d(TAG, CLASS, "refresh");
+        Utils.Log("refresh -- ");
         
         dayTv.setText(String.valueOf(one.get(Calendar.DAY_OF_MONTH)));
         msgTv.setText((one.getMessage()==null)?"":one.getMessage());
@@ -164,7 +159,5 @@ public class OneDayView extends RelativeLayout {
             weatherIv.setImageResource(R.drawable.sunny);
             break;
         }
-        
     }
-    
 }

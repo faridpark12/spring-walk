@@ -3,20 +3,16 @@ package pumpkin.kr.hanbat.calendar;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-import com.hansune.calendarproto.HLog;
-import com.hansune.calendarproto.MConfig;
-
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import pumpkin.kr.hanbat.common.Utils;
+
 
 public class OneMonthView extends LinearLayout implements View.OnClickListener {
-
-    private static final String TAG = MConfig.TAG;
     private static final String NAME = "OneMonthView";
-    private final String CLASS = NAME + "@" + Integer.toHexString(hashCode());
 
     private Context mContext;
     private int mYear;
@@ -112,12 +108,12 @@ public class OneMonthView extends LinearLayout implements View.OnClickListener {
     public void make(int year, int month)
     {
         if(mYear == year && mMonth == month) {
-            HLog.d(TAG, CLASS, ">>>>> same " + year + "." + month);
+            Utils.Log(NAME + " >>>>> same " + year + "." + month);
             return;
         }
         
         long makeTime = System.currentTimeMillis();
-        HLog.d(TAG, CLASS, ">>>>> make");
+        Utils.Log(NAME + " >>>>> make");
         
         this.mYear = year;
         this.mMonth = month;
@@ -133,7 +129,6 @@ public class OneMonthView extends LinearLayout implements View.OnClickListener {
         ArrayList<OneDayData> oneDayDatas = new ArrayList<OneDayData>();
         
         cal.add(Calendar.DAY_OF_MONTH, Calendar.SUNDAY - dayOfWeek);//주의 첫 일로 이동
-        //HLog.d(TAG, CLASS, "first day : " + cal.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.SHORT, Locale.KOREA) + " / " + cal.get(Calendar.DAY_OF_MONTH));
 
         /* add previous month */
         int seekDay;
@@ -147,8 +142,7 @@ public class OneMonthView extends LinearLayout implements View.OnClickListener {
             //하루 증가
             cal.add(Calendar.DAY_OF_MONTH, 1);
         }
-        
-        //HLog.d(TAG, CLASS, "this month : " + cal.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.SHORT, Locale.KOREA) + " / " + cal.get(Calendar.DAY_OF_MONTH));
+
         /* add this month */
         for(int i=0; i < maxOfMonth; i++) {
             OneDayData one = new OneDayData();
@@ -194,30 +188,26 @@ public class OneMonthView extends LinearLayout implements View.OnClickListener {
         this.setWeightSum(getChildCount());
 
 
-        HLog.d(TAG, CLASS, "<<<<< take timeMillis : " + (System.currentTimeMillis() - makeTime));
- 
+        Utils.Log(NAME + " <<<<< take timeMillis : " + (System.currentTimeMillis() - makeTime));
     }
 
 
     protected String doubleString(int value) {
-
         String temp;
  
-        if(value < 10){
+        if(value < 10) {
             temp = "0"+ String.valueOf(value);
              
-        }else {
+        } else {
             temp = String.valueOf(value);
         }
+
         return temp;
     }
  
     @Override
     public void onClick(View v) {
-
         OneDayView ov = (OneDayView) v;
-        HLog.d(TAG, CLASS, "click " + ov.get(Calendar.MONTH) + "/" + ov.get(Calendar.DAY_OF_MONTH));
-
+        Utils.Log(NAME + " click " + ov.get(Calendar.MONTH) + "/" + ov.get(Calendar.DAY_OF_MONTH));
     }
-
 }
