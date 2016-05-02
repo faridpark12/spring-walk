@@ -8,9 +8,7 @@ import java.util.Calendar;
  *
  */
 public class OneDayData {
-    
     Calendar cal;
-    MomusWeather.Weather weather;
     private CharSequence msg = "";
     
     /**
@@ -18,7 +16,6 @@ public class OneDayData {
      */
     public OneDayData() {
         this.cal = Calendar.getInstance();
-        this.weather = MomusWeather.Weather.SUNSHINE;
     }
     
     /**
@@ -63,21 +60,6 @@ public class OneDayData {
         return cal.get(field);
     }
 
-    /**
-     * Set weather info
-     * @param weather Weather instance
-     */
-    public void setWeather(MomusWeather.Weather weather) {
-        this.weather = weather;
-    }
-    
-    /**
-     * Get weather info
-     * @return
-     */
-    public MomusWeather.Weather getWeather() {
-        return this.weather;
-    }
 
     /**
      * Get message

@@ -45,8 +45,7 @@ public class OneMonthView extends LinearLayout implements View.OnClickListener {
                 if(i % 7 == 0) {
                     //한 주 레이아웃 생성
                     ll = new LinearLayout(mContext);
-                    LinearLayout.LayoutParams params
-                            = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0);
+                    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 0);
                     params.weight = 1;
                     ll.setOrientation(LinearLayout.HORIZONTAL);
                     ll.setLayoutParams(params);
@@ -73,7 +72,6 @@ public class OneMonthView extends LinearLayout implements View.OnClickListener {
             Calendar cal = Calendar.getInstance();
             make(cal.get(Calendar.YEAR), cal.get(Calendar.MONTH));
         }
-        
     }
 
     /**
@@ -105,8 +103,7 @@ public class OneMonthView extends LinearLayout implements View.OnClickListener {
     private ArrayList<LinearLayout> weeks = null;
     private ArrayList<OneDayView> dayViews = null;
 
-    public void make(int year, int month)
-    {
+    public void make(int year, int month) {
         if(mYear == year && mMonth == month) {
             Utils.Log(NAME + " >>>>> same " + year + "." + month);
             return;
@@ -158,8 +155,7 @@ public class OneMonthView extends LinearLayout implements View.OnClickListener {
                 OneDayData one = new OneDayData();
                 one.setDay(cal);
                 oneDayDatas.add(one);
-            } 
-            else {
+            } else {
                 break;
             }
             //하루 증가
@@ -173,10 +169,10 @@ public class OneMonthView extends LinearLayout implements View.OnClickListener {
         
         int count = 0;
         for(OneDayData oneday : oneDayDatas) {
-            
             if(count % 7 == 0) {
                 addView(weeks.get(count / 7));
             }
+
             OneDayView ov = dayViews.get(count);
             ov.setDay(oneday);
             ov.setMsg("");
@@ -186,7 +182,6 @@ public class OneMonthView extends LinearLayout implements View.OnClickListener {
 
         /* 주의 개수만큼 무게 지정*/
         this.setWeightSum(getChildCount());
-
 
         Utils.Log(NAME + " <<<<< take timeMillis : " + (System.currentTimeMillis() - makeTime));
     }

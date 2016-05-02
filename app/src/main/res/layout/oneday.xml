@@ -15,12 +15,11 @@
             android:id="@+id/onday_dayTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/lineframe"
             android:text="16"
-            android:textSize="12sp" />
+            android:textSize="16sp" />
 
         <View
-            android:layout_width="0px"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
@@ -49,7 +48,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:visibility="invisible">
 
         <ImageView
             android:layout_width="10dp"
@@ -58,14 +58,5 @@
             android:src="@drawable/dot" />
 
     </LinearLayout>
-
-    <ImageView
-        android:id="@+id/onday_weatherIv"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:contentDescription="@string/weather_icon"
-        android:src="@drawable/cloudy" />
 
 </RelativeLayout>

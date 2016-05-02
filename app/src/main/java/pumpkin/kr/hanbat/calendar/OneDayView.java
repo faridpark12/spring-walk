@@ -6,6 +6,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -22,12 +23,14 @@ public class OneDayView extends RelativeLayout {
     
     /** number text field */
     private TextView dayTv;
+
     /** message text field*/
     private TextView msgTv;
-    /** Weather icon */
-    private ImageView weatherIv;
+
     /** Value object for a day info */
     private OneDayData one;
+
+    private LinearLayout eventDotLayout;
 
     /**
      * OneDayView constructor
@@ -49,16 +52,13 @@ public class OneDayView extends RelativeLayout {
         init(context);
     }
  
-    private void init(Context context)
-    {
-
+    private void init(Context context) {
         View v = View.inflate(context, R.layout.oneday, this);
         
         dayTv = (TextView) v.findViewById(R.id.onday_dayTv);
-        weatherIv = (ImageView) v.findViewById(R.id.onday_weatherIv);
         msgTv = (TextView) v.findViewById(R.id.onday_msgTv);
+        eventDotLayout = (LinearLayout) v.findViewById(R.id.onday_eventDots);
         one = new OneDayData();
-        
     }
     
     /**
@@ -129,14 +129,6 @@ public class OneDayView extends RelativeLayout {
     }
 
     /**
-     * Set weather
-     * @param weather Weather instance
-     */
-    public void setWeather(MomusWeather.Weather weather) {
-        this.one.setWeather(weather);
-    }
-    
-    /**
      * Updates UI upon the value object.
      */
     public void refresh() {
@@ -144,20 +136,5 @@ public class OneDayView extends RelativeLayout {
         
         dayTv.setText(String.valueOf(one.get(Calendar.DAY_OF_MONTH)));
         msgTv.setText((one.getMessage()==null)?"":one.getMessage());
-        switch(one.weather) {
-        case CLOUDY :
-        case SUN_CLOUND :
-            weatherIv.setImageResource(R.drawable.cloudy);
-            break;
-        case RAINNY :
-            weatherIv.setImageResource(R.drawable.rainy);
-            break;
-        case SNOW :
-            weatherIv.setImageResource(R.drawable.snowy);
-            break;
-        case SUNSHINE :
-            weatherIv.setImageResource(R.drawable.sunny);
-            break;
-        }
     }
 }
