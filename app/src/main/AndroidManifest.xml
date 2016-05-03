@@ -25,6 +25,12 @@
 
         <activity android:name=".NotificationActivity">
         </activity>
+
+        <activity android:name=".calendar.ScheduleActivity">
+        </activity>
+
+        <activity android:name=".navermap.FragmentActivity">
+        </activity>
     </application>
 
 </manifest>

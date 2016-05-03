@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_today"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:textSize="20sp"
+        android:textColor="#888888" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/schedule_hour"
+                android:text="@string/h6" />
+            <View
+                style="@style/schedule_line" />
+            <EditText android:id="@+id/edt_schedule06"
+                style="@style/schedule_edit" />
+
+
+            <TextView
+                style="@style/schedule_hour"
+                android:text="@string/h7" />
+            <View
+                style="@style/schedule_line" />
+            <EditText android:id="@+id/edt_schedule07"
+                style="@style/schedule_edit" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                style="@style/schedule_hour"
+                android:text="@string/h8" />
+            <View
+                style="@style/schedule_line" />
+            <EditText android:id="@+id/edt_schedule08"
+                style="@style/schedule_edit" />
+
+
+            <TextView
+                style="@style/schedule_hour"
+                android:text="@string/h9" />
+            <View
+                style="@style/schedule_line" />
+            <EditText android:id="@+id/edt_schedule09"
+                style="@style/schedule_edit" />
+
+
+            <TextView
+                style="@style/schedule_hour"
+                android:text="@string/h10" />
+            <View
+                style="@style/schedule_line" />
+            <EditText android:id="@+id/edt_schedule10"
+                style="@style/schedule_edit" />
+
+
+            <TextView
+                style="@style/schedule_hour"
+                android:text="@string/h11" />
+            <View
+                style="@style/schedule_line" />
+            <EditText android:id="@+id/edt_schedule11"
+                style="@style/schedule_edit" />
+
+
+            <TextView
+                style="@style/schedule_hour"
+                android:text="@string/h12" />
+            <View
+                style="@style/schedule_line" />
+            <EditText android:id="@+id/edt_schedule12"
+                style="@style/schedule_edit" />
+
+
+            <TextView
+                style="@style/schedule_hour"
+                android:text="@string/h13" />
+            <View
+                style="@style/schedule_line" />
+            <EditText android:id="@+id/edt_schedule13"
+                style="@style/schedule_edit" />
+
+
+            <TextView
+                style="@style/schedule_hour"
+                android:text="@string/h14" />
+            <View
+                style="@style/schedule_line" />
+            <EditText android:id="@+id/edt_schedule14"
+                style="@style/schedule_edit" />
+
+
+            <TextView
+                style="@style/schedule_hour"
+                android:text="@string/h15" />
+            <View
+                style="@style/schedule_line" />
+            <EditText android:id="@+id/edt_schedule15"
+                style="@style/schedule_edit" />
+
+            <TextView
+                style="@style/schedule_hour"
+                android:text="@string/h16" />
+            <View
+                style="@style/schedule_line" />
+            <EditText android:id="@+id/edt_schedule16"
+                style="@style/schedule_edit" />
+
+
+            <TextView
+                style="@style/schedule_hour"
+                android:text="@string/h17" />
+            <View
+                style="@style/schedule_line" />
+            <EditText android:id="@+id/edt_schedule17"
+                style="@style/schedule_edit" />
+
+
+            <TextView
+                style="@style/schedule_hour"
+                android:text="@string/h18" />
+            <View
+                style="@style/schedule_line"/>
+            <EditText android:id="@+id/edt_schedule18"
+                style="@style/schedule_edit" />
+
+
+            <TextView
+                style="@style/schedule_hour"
+                android:text="@string/h19" />
+            <View
+                style="@style/schedule_line" />
+            <EditText android:id="@+id/edt_schedule19"
+                style="@style/schedule_edit" />
+
+
+            <TextView
+                style="@style/schedule_hour"
+                android:text="@string/h20" />
+            <View
+                style="@style/schedule_line" />
+            <EditText android:id="@+id/edt_schedule20"
+                style="@style/schedule_edit" />
+
+
+            <TextView
+                style="@style/schedule_hour"
+                android:text="@string/h21" />
+            <View
+                style="@style/schedule_line" />
+            <EditText android:id="@+id/edt_schedule21"
+                style="@style/schedule_edit" />
+
+
+            <TextView
+                style="@style/schedule_hour"
+                android:text="@string/h22" />
+            <View
+                style="@style/schedule_line" />
+            <EditText android:id="@+id/edt_schedule22"
+                style="@style/schedule_edit" />
+
+
+            <TextView
+                style="@style/schedule_hour"
+                android:text="@string/h23" />
+            <View
+                style="@style/schedule_line" />
+            <EditText android:id="@+id/edt_schedule23"
+                style="@style/schedule_edit" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

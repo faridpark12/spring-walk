@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -183,7 +184,7 @@ public class OneMonthView extends LinearLayout implements View.OnClickListener {
         /* 주의 개수만큼 무게 지정*/
         this.setWeightSum(getChildCount());
 
-        Utils.Log(NAME + " <<<<< take timeMillis : " + (System.currentTimeMillis() - makeTime));
+        //Utils.Log(NAME + " <<<<< take timeMillis : " + (System.currentTimeMillis() - makeTime));
     }
 
 
@@ -203,6 +204,11 @@ public class OneMonthView extends LinearLayout implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         OneDayView ov = (OneDayView) v;
-        Utils.Log(NAME + " click " + ov.get(Calendar.MONTH) + "/" + ov.get(Calendar.DAY_OF_MONTH));
+
+        Intent intent = new Intent(mContext, ScheduleActivity.class);
+        intent.putExtra("YEAR", ov.get(Calendar.YEAR));
+        intent.putExtra("MONTH", ov.get(Calendar.MONTH) + 1);
+        intent.putExtra("DAY", ov.get(Calendar.DAY_OF_MONTH));
+        mContext.startActivity(intent);
     }
 }

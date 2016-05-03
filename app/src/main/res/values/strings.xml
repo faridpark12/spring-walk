@@ -25,4 +25,25 @@
     <string name="sat">토</string>
     <string name="sun">일</string>
 
+    <string name="h6">6시</string>
+    <string name="h7">7시</string>
+    <string name="h8">8시</string>
+    <string name="h9">9시</string>
+    <string name="h10">10시</string>
+    <string name="h11">11시</string>
+    <string name="h12">12시</string>
+    <string name="h13">13시</string>
+    <string name="h14">14시</string>
+    <string name="h15">15시</string>
+    <string name="h16">16시</string>
+    <string name="h17">17시</string>
+    <string name="h18">18시</string>
+    <string name="h19">19시</string>
+    <string name="h20">20시</string>
+    <string name="h21">21시</string>
+    <string name="h22">22시</string>
+    <string name="h23">23시</string>
+
+    <string name="add">추가</string>
+
 </resources>

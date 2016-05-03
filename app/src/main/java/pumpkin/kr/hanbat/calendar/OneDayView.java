@@ -132,7 +132,7 @@ public class OneDayView extends RelativeLayout {
      * Updates UI upon the value object.
      */
     public void refresh() {
-        Utils.Log("refresh -- ");
+        //Utils.Log("refresh -- ");
         
         dayTv.setText(String.valueOf(one.get(Calendar.DAY_OF_MONTH)));
         msgTv.setText((one.getMessage()==null)?"":one.getMessage());
